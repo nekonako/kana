@@ -19,10 +19,12 @@ func main() {
 		}
 	}()
 
-	config, err := readConfig()
-	returnIfErr(err)
+	token := os.Getenv("DISCORD_TOKEN")
+	if token == "" {
+		panic("discord token must be provided")
+	}
 
-	bot, err := startBot(config.Token)
+	bot, err := startBot(token)
 	returnIfErr(err)
 
 	c := make(chan os.Signal, 1)
@@ -44,7 +46,7 @@ func startBot(token string) (bot *discordgo.Session, err error) {
 	err = bot.Open()
 	returnIfErr(err)
 
-	fmt.Println("bot is running..")
+	fmt.Println("kana is running..")
 	return
 
 }
