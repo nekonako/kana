@@ -54,15 +54,9 @@ func messagehandlers(s *discordgo.Session, m *discordgo.MessageCreate) {
 		return
 	}
 
-	if m.Content == "ping" {
-		_, err := s.ChannelMessageSend(m.ChannelID, "pong")
-		gomene(err, s, m)
-	}
-
 	if strings.HasPrefix(m.Content, "./code") {
 
 		code := strings.TrimLeft(m.Content, "./code ")
-		fmt.Println(code)
 
 		graphene := newGraphene()
 		graphene.setCode(code)
