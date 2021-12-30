@@ -8,8 +8,9 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v2
+          name : setting discord token
           run: |
-            echo { token : ${{ secrets.TOKEN }} } > config.json
+            echo { token : ${{ secrets.DISCORD_TOKEN }} } > config.json
             ls
         - uses: superfly/flyctl-actions@1.1
           with:
