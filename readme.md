@@ -1,5 +1,5 @@
 <h2><p align="center"><b>kana</b></p></h2>
-<p align="center"> <img src="./kana.jpg" width="300"/></p>
+<p align="center"> <img src="./kana.png" width="300"/></p>
 <p align="center">discord bot for generate code snippet on the fly, made with <a href="https://github.com/teknologi-umum/graphene/">graphene</a></p>
 
 ### Invite kana to your sever
