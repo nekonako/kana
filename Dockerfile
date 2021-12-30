@@ -4,7 +4,6 @@ WORKDIR /app
 
 COPY go.mod ./
 COPY go.sum ./
-COPY config.json ./
 
 RUN go mod download
 
