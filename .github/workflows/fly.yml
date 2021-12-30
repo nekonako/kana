@@ -6,11 +6,12 @@ jobs:
   deploy:
       runs-on: ubuntu-latest
       steps:
-        - name : setting discord token
-          uses: actions/checkout@v2
+      
+        - name: setting discord token
           run: |
             echo { token : ${{ secrets.DISCORD_TOKEN }} } > config.json
             ls
+            
         - name : rebuild image and deploy
           uses: superfly/flyctl-actions@1.1
           with:
