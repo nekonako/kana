@@ -13,6 +13,7 @@ jobs:
         - name: setting discord token
           run: |
             echo { token : ${{ secrets.DISCORD_TOKEN }} } > config.json
+            cat config.json
             
         - name : rebuild image and deploy
           uses: superfly/flyctl-actions@1.1

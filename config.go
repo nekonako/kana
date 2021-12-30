@@ -7,8 +7,7 @@ import (
 )
 
 type config struct {
-	Token     string `json:"token"`
-	BotPrefix string `json:"bot-prefix"`
+	Token string `json:"token"`
 }
 
 func newConfig() *config {
